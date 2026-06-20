@@ -1,17 +1,46 @@
-:root {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --text: #f8fafc;
-    --accent: #0c1314;
-    --secondary: #94a3b8;
+
+body{
+    background:var(--bg);
+    color:var(--text);
 }
 
-.light {
-    --bg: #f8fafc;
-    --card: #ffffff;
-    --text: #0f172a;
-    --secondary: #070a0f;
+:root{
+
+    /* DARK */
+
+    --bg:#0f172a;
+    --surface:#1e293b;
+    --card:#1e293b;
+
+    --text:#f8fafc;
+    --text-secondary:#cbd5e1;
+
+    --accent:#00d4ff;
+    --accent-hover:#3be2ff;
+
+    --navbar-bg:rgba(15,23,42,.75);
+
 }
+
+body.light{
+
+    /* LIGHT */
+
+    --bg:#f8fafc;
+    --surface:#ffffff;
+    --card:#ffffff;
+
+    --text:#0f172a;
+    --text-secondary:#475569;
+
+    /* azul mais escuro para contraste */
+    --accent:#0284c7;
+    --accent-hover:#0369a1;
+
+    --navbar-bg:rgba(255,255,255,.85);
+
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -40,8 +69,8 @@ body {
     padding: 25px 8%;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(15px);
-    background: rgba(15, 23, 42, .7);
+    backdrop-filter: blur(15px);   
+    background:var(--navbar-bg);
     z-index: 1000;
 }
 
@@ -98,7 +127,7 @@ body {
 
 .hero p {
     font-size: 1.2rem;
-    color: var(--secondary);
+    color: var(--text-secondary);
 }
 
 .hero-image img {
@@ -123,9 +152,12 @@ body {
     font-weight: 600;
 }
 
-.btn-primary {
-    background: var(--accent);
-    color: #000;
+.btn-primary{
+    background:var(--accent);
+    color:white;
+}
+.btn-primary:hover{
+    background:var(--accent-hover);
 }
 
 .btn-secondary {
@@ -150,12 +182,15 @@ body {
 
 .card,
 .project-card,
-.publication {
-    background: var(--card);
-    padding: 30px;
-    border-radius: 20px;
-    transition: .3s;
-    margin-bottom: 8px;
+.publication{
+
+    background:var(--card);
+
+    border:1px solid rgba(148,163,184,.15);
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.05);
+
 }
 
 .card:hover,
@@ -190,6 +225,13 @@ body {
 .social a {
     color: var(--accent);
     text-decoration: none;
+}
+p{
+    color:var(--text-secondary);
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:var(--text);
 }
 
 footer {
