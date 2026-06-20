@@ -2,7 +2,7 @@
     --bg: #0f172a;
     --card: #1e293b;
     --text: #f8fafc;
-    --accent: #00d4ff;
+    --accent: #0c1314;
     --secondary: #94a3b8;
 }
 
@@ -10,9 +10,12 @@
     --bg: #f8fafc;
     --card: #ffffff;
     --text: #0f172a;
-    --secondary: #475569;
+    --secondary: #070a0f;
 }
-
+a {
+    text-decoration: none;
+    color: white;
+}
 * {
     margin: 0;
     padding: 0;
